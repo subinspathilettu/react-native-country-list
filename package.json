@@ -1,0 +1,27 @@
+{
+  "name": "react-native-country-list",
+  "version": "1.0.0",
+  "description": "A react native country selection list",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subinspathilettu/react-native-country-list.git"
+  },
+  "keywords": [
+    "country",
+    "list",
+    "react-native"
+  ],
+  "author": "Subins P Jose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subinspathilettu/react-native-country-list/issues"
+  },
+  "homepage": "https://github.com/subinspathilettu/react-native-country-list#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.53.1"
+  }
+}
