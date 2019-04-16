@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.4",
-    "react-native-country-list": "../../react-native-country-list-1.0.0.tgz"
+    "react-native-country-list": "../../react-native-country-list-1.0.8.tgz"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

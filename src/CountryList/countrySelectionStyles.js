@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import globalStyles from '../../styles/globalStyles';
 
 export default StyleSheet.create({
   container: {
@@ -10,10 +9,6 @@ export default StyleSheet.create({
     resizeMode: 'contain',
     width: '100%',
     height: '100%',
-  },
-  headerTitle: {
-    ...globalStyles.fontFamily,
-    ...globalStyles.navigationBar,
   },
   searchContainer: {
     height: 83,
@@ -34,7 +29,6 @@ export default StyleSheet.create({
     marginHorizontal: 10,
   },
   textInput: {
-    ...globalStyles.fontFamily,
     flex: 1,
   },
   sectionContainer: {
@@ -43,7 +37,6 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   sectionHeader: {
-    ...globalStyles.fontFamily,
     marginLeft: 20,
     fontSize: 15,
     fontWeight: 'bold',
@@ -60,7 +53,6 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   itemText: {
-    ...globalStyles.fontFamily,
     fontSize: 15,
     fontWeight: 'normal',
     color: '#444444',

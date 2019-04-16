@@ -1,2 +1,2 @@
-import CountrySlection from './src/CountryList/CountrySelection';
-export { CountrySlection };
+import CountrySelection from './src/CountryList/CountrySelection';
+export { CountrySelection };
