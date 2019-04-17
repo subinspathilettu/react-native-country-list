@@ -17,7 +17,7 @@ const ItemView = (params) => {
   }
   return (
     <View style={styles.itemContainer}>
-      <TouchableOpacity style={styles.itemTextContainer} onPress={() => params.action(params)}>
+      <TouchableOpacity style={styles.itemTextContainer} onPress={() => params.action(params.item)}>
         <Image source={{ uri: params.item.flag }} style={styles.flag} />
         <Text numberOfLines={1} style={styles.itemText}>{text}</Text>
         <View style={styles.selectionView}>
@@ -55,12 +55,6 @@ export default class CountrySelection extends React.Component {
   }
 
   /**
-   * Country selection action
-   */
-  onCountrySelection = (params) => {
-  }
-
-  /**
    * Change search text action
    */
   onChangeSearchText = (text) => {
@@ -72,12 +66,7 @@ export default class CountrySelection extends React.Component {
    * Generate section data from country list
    */
   generateSectionData(countryList) {
-    const sections = [];
-    const { selected } = this.props;
-    if (selected != null) {
-      sections.push({ title: 'SELECTED LOCATION', data: [selected] });
-    }
-
+    const sections = [];    
     const sectionHeaders = countryList.map(data => data.name.charAt(0));
     const uniqueHeaders = Array.from(new Set(sectionHeaders));
 
@@ -89,7 +78,7 @@ export default class CountrySelection extends React.Component {
   }
 
   render() {
-    const { selected } = this.props;
+    const { selected, action } = this.props;
     const { sections } = this.state;
 
     return (
@@ -113,7 +102,7 @@ export default class CountrySelection extends React.Component {
               item={item}
               index={index}
               section={section}
-              action={() => this.onCountrySelection(item)}
+              action={(item) => action(item)}
               selected={selected}
             />
           )}

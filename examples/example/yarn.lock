@@ -4903,13 +4903,13 @@ react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
-react-native-country-list@../../react-native-country-list-1.0.7.tgz:
-  version "1.0.7"
-  resolved "../../react-native-country-list-1.0.7.tgz#e39b7a2d8911b37235875aba0685ae5c5f0c020e"
+react-native-country-list@../../react-native-country-list-1.0.10.tgz:
+  version "1.0.10"
+  resolved "../../react-native-country-list-1.0.10.tgz#ad95e19d28a56cbe5bc02e2377deaabd5a754e7e"
 
-react-native-country-list@../../react-native-country-list-1.0.8.tgz:
-  version "1.0.8"
-  resolved "../../react-native-country-list-1.0.8.tgz#d30bce18e7f4d3173531ca5f8ec2bfe62239651e"
+react-native-country-list@../../react-native-country-list-1.0.9.tgz:
+  version "1.0.9"
+  resolved "../../react-native-country-list-1.0.9.tgz#e857cf2a2733cc9521f65bb0dcffb0349c0e4b50"
 
 react-native@0.59.4:
   version "0.59.4"

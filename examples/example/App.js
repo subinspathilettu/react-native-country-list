@@ -11,10 +11,26 @@ import { StyleSheet, View} from 'react-native';
 import { CountrySelection } from 'react-native-country-list';
 
 export default class App extends Component {
-  render() {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected: null,
+    };
+  }
+
+  /**
+   * Country selection action
+   */
+  onCountrySelection = (country) => {
+    this.setState({selected: country});
+  }
+
+  render(){
+    const { selected } = this.state;
     return (
       <View style={styles.container}>
-        <CountrySelection/>
+        <CountrySelection action={(item) => this.onCountrySelection(item)} selected={selected}/>
       </View>
     );
   }
