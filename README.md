@@ -22,3 +22,7 @@ render(){
     );
   }
   ```
+  
+## Licence
+
+[MIT](https://github.com/subinspathilettu/react-native-country-list/blob/master/LICENCE)
