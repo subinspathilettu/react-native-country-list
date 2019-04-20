@@ -13,7 +13,8 @@
   "keywords": [
     "country",
     "list",
-    "react-native"
+    "react-native",
+    "react-native-country-list",
   ],
   "author": "Subins P Jose",
   "license": "MIT",
