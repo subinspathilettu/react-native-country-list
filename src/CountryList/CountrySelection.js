@@ -10,7 +10,7 @@ import { searchIcon, countrySelectionTick, countries } from './Constants';
  * @param {*} params
  */
 const ItemView = (params) => {  
-  let text = `${params.item.name} (+${params.item.callingCode})`;
+  let text = params?.showPhoneCode ? `${params.item.name} (+${params.item.callingCode})` : `${params.item.name}` ;
   let selected = null;
   if (params.selected != null && params.selected.callingCode === params.item.callingCode) {
     selected = <Image source={countrySelectionTick} style={styles.selectionTick} />;
@@ -51,7 +51,14 @@ export default class CountrySelection extends React.Component {
   }
 
   componentWillMount() {
-    this.generateSectionData(countries);
+    if (this.props.filterByName) {
+      const filteredByNameCountries = countries.filter((country) => this.props.filterByName.includes(country.name))
+      this.generateSectionData(filteredByNameCountries);
+
+    } else {
+      this.generateSectionData(countries);
+
+    }
   }
 
   /**
@@ -78,7 +85,7 @@ export default class CountrySelection extends React.Component {
   }
 
   render() {
-    const { selected, action } = this.props;
+    const { selected, action, showPhoneCode } = this.props;
     const { sections } = this.state;
 
     return (
@@ -104,6 +111,7 @@ export default class CountrySelection extends React.Component {
               section={section}
               action={(item) => action(item)}
               selected={selected}
+              showPhoneCode={showPhoneCode}
             />
           )}
           renderSectionHeader={({ section: { title } }) => (<SectionHeader title={title} />)}
